@@ -10,7 +10,7 @@
       button
       *ngFor="let item of movies"
       detail="false"
-      [routerLink]="['movies/',item.id]"
+      [routerLink]="[item.id]"
     >
       <ion-avatar slot="start">
         <img [src]="imgUrl + '/w92' + item.poster_path" alt="" />
