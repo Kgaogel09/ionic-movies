@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -7,7 +8,7 @@ export interface ApiResults {
   page: number;
   results: [];
   total_pages: number;
-  // total_results: number;
+  total_results: number;
 }
 
 @Injectable({
