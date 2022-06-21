@@ -17,12 +17,12 @@
       </ion-avatar>
       <ion-label
         >{{item.title}}
-        <p>{{item.release_date | date:'y'}}</p>
+        <p>{{item.release_date | date:'mediumDate'}}</p>
       </ion-label>
       <ion-badge color="success" slot="end">{{item.vote_average}}</ion-badge>
     </ion-item>
   </ion-list>
-  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($any($event))">
     <ion-infinite-scroll-content
       loadingSpinner="bubbles"
       loadingText="Loading more data..."

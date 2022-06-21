@@ -1,7 +1,8 @@
 import { MovieService } from './../../services/movie.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { environment } from '../../../environments/environment';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-movies-details',
@@ -14,7 +15,8 @@ export class MoviesDetailsPage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private movieService: MovieService
+    private movieService: MovieService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -24,5 +26,9 @@ export class MoviesDetailsPage implements OnInit {
       this.movie = res;
     });
     console.log(id);
+  }
+
+  openHome() {
+    window.open(this.movie.homepage);
   }
 }
