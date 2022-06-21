@@ -8,7 +8,7 @@ const routes: Routes = [
       import('./pages/movies/movies.module').then((m) => m.MoviesPageModule),
   },
   {
-    path: '',
+    path: 'movies',
     redirectTo: 'movies',
     pathMatch: 'full',
   },
